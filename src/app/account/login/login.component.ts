@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AccountService } from 'src/app/account/account.service';
 
 @Component({
   selector: 'app-login',
@@ -8,22 +8,22 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  form!: FormGroup;                    // {1}
-  private formSubmitAttempt!: boolean; // {2}
+  form!: FormGroup;
+  private formSubmitAttempt!: boolean;
 
   constructor(
-    private fb: FormBuilder,         // {3}
-    private authService: AuthService // {4}
-  ) {}
+    private fb: FormBuilder,
+    private accountService: AccountService
+  ) { }
 
   ngOnInit() {
-    this.form = this.fb.group({     // {5}
+    this.form = this.fb.group({
       userName: ['tony@anything.com', Validators.required],
       password: ['ok', Validators.required]
     });
   }
 
-  isFieldInvalid(field: string) { // {6}
+  isFieldInvalid(field: string) {
     return (
       (!this.form.get(field)!.valid && this.form.get(field)!.touched) ||
       (this.form.get(field)!.untouched && this.formSubmitAttempt)
@@ -32,8 +32,8 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.form.valid) {
-      this.authService.login(this.form.value); // {7}
+      this.accountService.login(this.form.value); 
     }
-    this.formSubmitAttempt = true;             // {8}
+    this.formSubmitAttempt = true;             
   }
 }

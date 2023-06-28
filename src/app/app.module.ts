@@ -8,8 +8,8 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './components/home/home.component';
 import { OrderComponent } from './components/order/order.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HeaderComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './core/navbar/navbar.component';
+import { LoginComponent } from './account/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AccountService } from 'src/app/account/account.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,14 +11,13 @@ import { AuthService } from 'src/app/auth/auth.service';
 export class HeaderComponent implements OnInit {
 
   isLoggedIn$!: Observable<boolean>;
-  constructor(private authService: AuthService){ }
+  constructor(private accountService: AccountService){ }
 
   ngOnInit(): void {
-    this.isLoggedIn$ = this.authService.isLoggedIn;
+    this.isLoggedIn$ = this.accountService.isLoggedIn;
   }
 
-
   onLogout(){
-    this.authService.logout(); 
+    this.accountService.logout(); 
   }
 }

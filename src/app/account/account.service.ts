@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from './user';
+import { User } from '../models/user';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AccountService {
 
   private loggedIn = new BehaviorSubject<boolean>(false); // {1}
 
