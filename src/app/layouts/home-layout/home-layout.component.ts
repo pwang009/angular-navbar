@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home-layout',
   template: `
+    <app-header></app-header>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['./app.component.scss']
+  styles: [
+  ]
 })
-export class AppComponent {
-  title = 'app4';
+export class HomeLayoutComponent {
+
 }
