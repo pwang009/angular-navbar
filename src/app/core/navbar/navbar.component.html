@@ -1,10 +1,10 @@
 <mat-toolbar color="primary" *ngIf="isLoggedIn$ | async as isLoggedIn">
     <span>
-      <img src="assets/img/angular_whiteTransparent.svg" class="angular-logo">
+      <img src="assets/img/logo-3.png" class="angular-logo">
       Lotus 
     </span>
     <span class="fill-remaining-space"></span>
-    <button mat-button>Product</button>
+    <button routerLink="/reports">Product</button>
     <button mat-button>Reports</button>
     <!-- <button mat-button routerLink="login">Login</button> -->
     <button mat-button (click)="onLogout()" *ngIf="isLoggedIn">Logout</button>

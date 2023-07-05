@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './core/navbar/navbar.component';
 import { LoginComponent } from './account/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReportComponent } from './components/report/report.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     OrderComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
