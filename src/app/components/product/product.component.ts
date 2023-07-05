@@ -6,9 +6,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { UserData } from 'src/app/models/user-data';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.scss']
 })
 export class HomeComponent {
   displayedColumns = ['id', 'name', 'progress', 'color', 'action'];

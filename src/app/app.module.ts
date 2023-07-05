@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/product/product.component';
 import { OrderComponent } from './components/order/order.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './core/navbar/navbar.component';
